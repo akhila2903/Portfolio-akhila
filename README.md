@@ -1,1 +1,1 @@
-https://akhila-portfolio.vercel.app/
+https://portfolio-akhila-ten.vercel.app/
