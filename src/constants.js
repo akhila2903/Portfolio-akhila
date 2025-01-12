@@ -55,7 +55,8 @@ export const serviceData = [
     
       name: 'Machine Learning',
       desc: `I specialize in building machine learning models to analyze data, predict outcomes, and optimize processes. From data preprocessing and feature engineering to deploying scalable AI solutions, I use tools like Python, TensorFlow, and scikit-learn to deliver impactful results. My expertise includes regression, classification, deep learning, and predictive analytics tailored to real-world challenges.`,
-      img: "https://img.icons8.com/color/64/000000/machine-learning.png"
+      img: "https://img.icons8.com/fluency/64/000000/artificial-intelligence.png"
+  
     
 
 

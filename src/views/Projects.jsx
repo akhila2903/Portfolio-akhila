@@ -28,21 +28,41 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="projects" className={darkMode ? "bg-white text-black" : "bg-gray-900 text-white"}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+    <div
+      id="projects"
+      className={`${
+        darkMode ? "bg-white text-black" : "bg-gray-900 text-white"
+      } py-24`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-5xl font-bold text-center">Projects</h2>
-        <h4 className="mt-16 text-3xl font-semibold text-blue-600">What I Built</h4>
-        <div className="mt-8 flex flex-wrap justify-between items-stretch">
+        <h4 className="mt-16 text-3xl font-semibold text-blue-600 text-center">
+          What I Built
+        </h4>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {repos.map((repo) => (
-            <Card
-              key={repo.id} // Ensures each project is unique
-              title={repo.name}
-              description={repo.description || "No description available"}
-              link={repo.html_url}
-            />
+            <div
+              key={repo.id}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col justify-between"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                {repo.name}
+              </h3>
+              <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm line-clamp-3">
+                {repo.description || "No description available."}
+              </p>
+              <a
+                href={repo.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                View Project
+              </a>
+            </div>
           ))}
         </div>
-        <div className="text-center mt-4">
+        <div className="text-center mt-12">
           <a
             href="https://github.com/akhila2903?tab=repositories"
             target="_blank"
@@ -53,7 +73,7 @@ const Projects = () => {
             <svg
               className="ml-2 -mr-1 w-4 h-4"
               fill="currentColor"
-              viewBox="0 0 40 40"
+              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
